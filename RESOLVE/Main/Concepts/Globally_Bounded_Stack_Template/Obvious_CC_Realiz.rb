@@ -9,17 +9,19 @@ Realization Obvious_CC_Realiz
         Var Next_Entry, Entry_Copy: Entry;
         Var S_Reversed: Stack;
 
-        While (Not(Is_Empty(S_Orig)))
-    	changing Next_Entry, S_Orig, S_Reversed;
+        While ( not Is_Empty(S_Orig) )
+            changing Next_Entry, S_Orig, S_Reversed;
             maintaining #S_Orig = Reverse(S_Reversed) o S_Orig;
             decreasing |S_Orig|;
         do
             Pop(Next_Entry, S_Orig);
             Push(Next_Entry, S_Reversed);
         end;
+
         Clear(S_Copy);
-        While (Not(Is_Empty(S_Reversed)))
-		changing Entry_Copy, Next_Entry, S_Copy, S_Orig, S_Reversed;
+
+        While ( not Is_Empty(S_Reversed) )
+            changing Entry_Copy, Next_Entry, S_Copy, S_Orig, S_Reversed;
             maintaining S_Copy = S_Orig and
                         #S_Orig = Reverse(S_Reversed) o S_Orig;
             decreasing |S_Reversed|;

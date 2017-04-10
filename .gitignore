@@ -8,12 +8,14 @@
 
 # VCs
 *.asrt
+*.asrt_new
 
 # Proofs
 *.proof
+*.smt
 
 # AST graphs
-*.ast
+*.gv
 
 ###################
 # User Facilities #

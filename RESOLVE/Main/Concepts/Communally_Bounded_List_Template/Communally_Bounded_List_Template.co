@@ -1,5 +1,5 @@
 Concept Communally_Bounded_List_Template( type Entry; eval Initial_Capacity: Integer );
-	uses String_Theory;
+	uses String_Theory, Integer_Ext_Theory;
 	requires Initial_Capacity > 0;
 	
 	(* Note: Under Construction! *)

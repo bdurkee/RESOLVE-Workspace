@@ -1,9 +1,10 @@
 Realization Obvious_Flipping_Realiz for Flipping_Capability of Stack_Template;
+
 	Procedure Flip(updates S: Stack);
 		Var Temp: Stack;
 		Var Next_Entry: Entry;
 
-		While (Depth(S) /= 0)
+		While ( 1 <= Depth(S) )
 			maintaining #S = Reverse(Temp) o S;
 			decreasing |S|;
 		do
@@ -12,4 +13,5 @@ Realization Obvious_Flipping_Realiz for Flipping_Capability of Stack_Template;
 		end;
 		Temp :=: S;
 	end Flip;
+	
 end Obvious_Flipping_Realiz;

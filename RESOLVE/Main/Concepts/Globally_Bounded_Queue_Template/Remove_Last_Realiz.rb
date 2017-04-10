@@ -4,8 +4,8 @@ Realization Remove_Last_Realiz for Remove_Last_Capability of Globally_Bounded_Qu
 		Var T: Queue;
 
 		Dequeue (E, Q);
-		While ( Not(Is_Empty(Q)) )
-			changing Q,T,E;
+		While ( not Is_Empty(Q) )
+			changing Q, T, E;
 			maintaining #Q = T o <E> o Q;
 			decreasing |Q|;
 		do

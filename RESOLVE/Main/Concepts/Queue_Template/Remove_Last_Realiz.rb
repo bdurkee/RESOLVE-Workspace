@@ -3,10 +3,10 @@ Realization Remove_Last_Realiz for Remove_Last_Capability of Queue_Template;
 		Var T: Queue;
 
 		Dequeue (E, Q);
-		
-		While (Length(Q) /= 0)
-			changing Q,T,E;
-			maintaining #Q = T o <E> o Q;
+		While ( 1 <= Length(Q) )
+			changing Q, T, E;
+			-- fill in a suitable invariant
+			maintaining true;
 			decreasing |Q|;
 		do
 			Enqueue(E,T);

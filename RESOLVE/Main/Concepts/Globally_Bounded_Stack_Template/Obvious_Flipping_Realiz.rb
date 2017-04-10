@@ -5,7 +5,7 @@ Realization Obvious_Flipping_Realiz for Flipping_Capability of
 		Var Temp: Stack;
 		Var Next_Entry: Entry;
 
-		While ( Not(Is_Empty(S)) )
+		While ( not Is_Empty(S) )
 			maintaining #S = Reverse(Temp) o S;
 			decreasing |S|;
 		do

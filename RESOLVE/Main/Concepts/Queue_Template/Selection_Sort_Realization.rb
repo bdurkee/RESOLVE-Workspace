@@ -5,11 +5,13 @@ Realization Selection_Sort_Realization(
 		for Sorting_Capability of Queue_Template;
 	uses String_Theory;
 
+    (* Note: Under Construction! *)
+	
 	Operation Remove_Min(updates Q : Queue; replaces Min : Entry);
 		requires |Q| /= 0;
 		ensures Is_Permutation(Q o <Min>, #Q) and
 			Is_Universally_Related(<Min>, Q, LEQV) and
-			|Q| = |#Q| - 1;
+			|#Q| = 1 + |Q|;
 	Procedure
 		Var Considered_Entry : Entry;
 		Var New_Queue : Queue;

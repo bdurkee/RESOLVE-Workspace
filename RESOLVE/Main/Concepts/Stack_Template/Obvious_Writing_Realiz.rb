@@ -4,9 +4,8 @@ Realization Obvious_Writing_Realiz (Operation Write_Entry(evaluates E: Entry);)
 	Procedure Write(clears S: Stack);
 		Var Next_Entry: Entry;
 
-		While (Depth(S) /= 0)
+		While ( 1 <= Depth(S) )
 			changing S, Next_Entry;
-			maintaining true;
 			decreasing |S|;
 		do
 			Pop(Next_Entry, S);
